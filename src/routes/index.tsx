@@ -6,6 +6,7 @@ import PulsingButton from "../pages/PulsingButton";
 import BouncingLoader from "../pages/BouncingLoader";
 import { FlippingCard } from "../pages/FlippingCard";
 import { SpringEffects } from "../pages/SpringEffects";
+import UseTransformEffects from "../pages/UseTransformEffects";
 
 
 
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
         element: <BouncingLoader/>
     },
     {
-        path:"flipping-card",
+        path:"/flipping-card",
         id:"Flipping Card",
         element:<FlippingCard />
     },
@@ -45,6 +46,11 @@ const router = createBrowserRouter([
         path:"/spring-hover-effect",
         id:"Spring Effects",
         element: <SpringEffects/>
+    },
+    {
+        path:"/useTransform-effects",
+        id:"Use Transform Effects",
+        element: <UseTransformEffects/>
     }
 ]);
 
