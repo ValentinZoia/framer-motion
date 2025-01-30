@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 const BouncingLoader = () => {
   return (
-    <div className='flex justify-center items-center space-x-2'>
+    <div className='w-full h-screen flex justify-center items-center space-x-2'>
         {[...Array(3)].map((_,index) =>(
             <motion.div 
                 key={index} 

@@ -11,9 +11,10 @@ export const FlippingCard = () => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <motion.div
+    <div className="w-full h-screen flex items-center justify-center">
+        <motion.div
       onClick={() => setIsFlipped(!isFlipped)}
-      className="perspective-1000 cursor-pointer"
+      className="perspective-1000 cursor-pointer "
       
     >
       <motion.div
@@ -29,5 +30,7 @@ export const FlippingCard = () => {
         </div>
       </motion.div>
     </motion.div>
+    </div>
+    
   );
 };
