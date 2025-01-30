@@ -27,11 +27,11 @@ export default function DynamicCounter() {
       <motion.div className="w-24 h-24 text-center text-white " initial="odd" animate={count % 2 === 0 ? "even" : "odd"} variants={variants}>
         {count}
       </motion.div>
-      <button className="px-4 py-2 bg-white rounded-md font-bold" onClick={() => setCount((c) => c + 1)}>
+      <button className="px-4 py-2 bg-black rounded-md font-bold" onClick={() => setCount((c) => c + 1)}>
           Click
         </button>
 
-        <button className="px-4 py-2 bg-white rounded-md font-bold" onClick={() => setCount(0)}>
+        <button className="px-4 py-2 bg-black rounded-md font-bold" onClick={() => setCount(0)}>
           RESET
         </button>
       </div> 
