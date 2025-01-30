@@ -2,9 +2,9 @@ import {motion} from "framer-motion";
 
 export const SpringEffects = () => {
   return (
-    <div className=" grid  grid-cols-2 gap-8 space-x-8">
+    <div className=" grid  grid-cols-2 gap-8 ">
         {/* whileHover */}
-        {/*El type spring le da como un efecto de rebote*/ }
+        {/*El type spring le da como un efecto de rebote cuando hago hover*/ }
         <motion.div 
             className="box"
             whileHover={{
@@ -36,6 +36,27 @@ export const SpringEffects = () => {
             Tap Me!
         </motion.div>
 
+        {/* whileDrag */}
+        <motion.div
+            className="box"
+            drag
+            dragConstraints={{
+                top:0,
+                left:0,
+                right:0,
+                bottom:0
+            }}
+            whileDrag={{
+                scale:1.2,
+                rotate:10,
+            }}
+            transition={{
+                type:"spring",
+                stiffness:300
+            }}
+        >
+            Drag Me!
+        </motion.div>
 
     </div>
   )
