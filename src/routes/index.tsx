@@ -7,6 +7,7 @@ import BouncingLoader from "../pages/BouncingLoader";
 import { FlippingCard } from "../pages/FlippingCard";
 import { SpringEffects } from "../pages/SpringEffects";
 import UseTransformEffects from "../pages/UseTransformEffects";
+import WhileInView from "../pages/WhileInView";
 
 
 
@@ -51,6 +52,11 @@ const router = createBrowserRouter([
         path:"/useTransform-effects",
         id:"Use Transform Effects",
         element: <UseTransformEffects/>
+    },
+    {
+        path:"/whileInView",
+        id:"While In View",
+        element: <WhileInView/>
     }
 ]);
 
