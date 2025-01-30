@@ -5,7 +5,7 @@ import BasicEffects from "../pages/BasicEffects";
 import PulsingButton from "../pages/PulsingButton";
 import BouncingLoader from "../pages/BouncingLoader";
 import { FlippingCard } from "../pages/FlippingCard";
-import { SpringHoverEffect } from "../pages/SpringHoverEffect";
+import { SpringEffects } from "../pages/SpringEffects";
 
 
 
@@ -43,8 +43,8 @@ const router = createBrowserRouter([
     },
     {
         path:"/spring-hover-effect",
-        id:"Spring Hover Effect",
-        element: <SpringHoverEffect/>
+        id:"Spring Effects",
+        element: <SpringEffects/>
     }
 ]);
 

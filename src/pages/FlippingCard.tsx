@@ -13,7 +13,7 @@ export const FlippingCard = () => {
   return (
     <motion.div
       onClick={() => setIsFlipped(!isFlipped)}
-      className="perspective-1000"
+      className="perspective-1000 cursor-pointer"
       
     >
       <motion.div
