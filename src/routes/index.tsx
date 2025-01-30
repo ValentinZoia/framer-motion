@@ -7,7 +7,11 @@ import BouncingLoader from "../pages/BouncingLoader";
 import { FlippingCard } from "../pages/FlippingCard";
 import { SpringEffects } from "../pages/SpringEffects";
 import UseTransformEffects from "../pages/UseTransformEffects";
-import WhileInView from "../pages/WhileInView";
+import WhileInView from "../pages/WhileInView/WhileInView";
+import Example1 from "../pages/WhileInView/Example1";
+import Example2 from "../pages/WhileInView/Example2";
+
+
 
 
 
@@ -56,7 +60,18 @@ const router = createBrowserRouter([
     {
         path:"/whileInView",
         id:"While In View",
-        element: <WhileInView/>
+        element: <WhileInView/>,
+        
+    },
+    {
+        path:"/whileInView/example-1",
+        id:"Example 1",
+        element:<Example1/>
+    },
+    {
+        path:"/whileInView/example-2",
+        id:"Example 2",
+        element:<Example2/>
     }
 ]);
 

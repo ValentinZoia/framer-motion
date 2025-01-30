@@ -4,7 +4,7 @@ import router from "../routes";
 
 
 export default function HomePage() {
-  const filterRoutes = router.routes.map((r) => r).filter((r)=>r.path !== "/");
+  const filterRoutes = router.routes.map((r) => r).filter((r)=>r.path !== "/" && !(r.path?.includes("example")));
   
   return (
     <div className="w-full h-screen flex flex-col gap-4 items-center justify-center">
