@@ -21,6 +21,7 @@ import MotionValueComponent from "../pages/useMotionValue/MotionValueComponent";
 import UseMotionValueExample1 from "../pages/useMotionValue/Example1";
 import UseMotionValueExample2 from "../pages/useMotionValue/Example2";
 import UseMotionValueExample3 from "../pages/useMotionValue/Example3";
+import ScrollIndicator from "../pages/ScrollIndicator";
 
 
 
@@ -140,6 +141,11 @@ const router = createBrowserRouter([
         path:"/useMotionValue/example-3",
         id:"Example 3 - Use Motion Value",
         element:<UseMotionValueExample3/>
+    },
+    {
+        path:"scroll-indicator",
+        id:"Scroll Indicator",
+        element:<ScrollIndicator/>
     }
     
 
