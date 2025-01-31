@@ -13,6 +13,8 @@ import Example2 from "../pages/WhileInView/Example2";
 import UseScrollExample2 from "../pages/UseScroll/Example2";
 import UseScroll from "../pages/UseScroll/UseScroll";
 import UseScrollExample3 from "../pages/UseScroll/Example3";
+import ImageGallery from "../pages/ImageGallery";
+
 
 
 
@@ -92,6 +94,12 @@ const router = createBrowserRouter([
         id:"Example 2 - Use Scroll",
         element:<UseScrollExample3/>
     },
+    {
+        path:"/image-gallery",
+        id:"Image Gallery",
+        element:<ImageGallery/>
+    },
+    
 
 ]);
 
