@@ -10,6 +10,10 @@ import UseTransformEffects from "../pages/UseTransformEffects";
 import WhileInView from "../pages/WhileInView/WhileInView";
 import Example1 from "../pages/WhileInView/Example1";
 import Example2 from "../pages/WhileInView/Example2";
+import UseScrollExample2 from "../pages/UseScroll/Example2";
+import UseScroll from "../pages/UseScroll/UseScroll";
+import UseScrollExample3 from "../pages/UseScroll/Example3";
+
 
 
 
@@ -65,14 +69,30 @@ const router = createBrowserRouter([
     },
     {
         path:"/whileInView/example-1",
-        id:"Example 1",
+        id:"Example 1 - While In View",
         element:<Example1/>
     },
     {
         path:"/whileInView/example-2",
-        id:"Example 2",
+        id:"Example 2 - While In View",
         element:<Example2/>
-    }
+    },
+    {
+        path:"/use-scroll",
+        id:"Use Scroll",
+        element:<UseScroll/>
+    },
+    {
+        path:"/use-scroll/example-1",
+        id:"Example 1 - Use Scroll",
+        element:<UseScrollExample2/>
+    },
+    {
+        path:"/use-scroll/example-2",
+        id:"Example 2 - Use Scroll",
+        element:<UseScrollExample3/>
+    },
+
 ]);
 
 
