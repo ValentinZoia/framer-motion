@@ -17,6 +17,10 @@ import ImageGallery from "../pages/ImageGallery";
 import StraggerAnimation from "../pages/Stragger Animation/StraggerAnimation";
 import StraggerAnimationExample1 from "../pages/Stragger Animation/Example1";
 import StraggerAnimationExample2 from "../pages/Stragger Animation/Example2";
+import MotionValueComponent from "../pages/useMotionValue/MotionValueComponent";
+import UseMotionValueExample1 from "../pages/useMotionValue/Example1";
+import UseMotionValueExample2 from "../pages/useMotionValue/Example2";
+import UseMotionValueExample3 from "../pages/useMotionValue/Example3";
 
 
 
@@ -116,6 +120,26 @@ const router = createBrowserRouter([
         path:"/stragger-animation/example-2",
         id:"Example 2 - Stragger Animation",
         element:<StraggerAnimationExample2/>
+    },
+    {
+        path:"/useMotionValue",
+        id:"Use Motion Value",
+        element:<MotionValueComponent/>
+    },
+    {
+        path:"/useMotionValue/example-1",
+        id:"Example 1 - Use Motion Value",
+        element:<UseMotionValueExample1/>
+    },
+    {
+        path:"/useMotionValue/example-2",
+        id:"Example 2 - Use Motion Value",
+        element:<UseMotionValueExample2/>
+    },
+    {
+        path:"/useMotionValue/example-3",
+        id:"Example 3 - Use Motion Value",
+        element:<UseMotionValueExample3/>
     }
     
 
