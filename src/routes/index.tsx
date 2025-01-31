@@ -14,6 +14,9 @@ import UseScrollExample2 from "../pages/UseScroll/Example2";
 import UseScroll from "../pages/UseScroll/UseScroll";
 import UseScrollExample3 from "../pages/UseScroll/Example3";
 import ImageGallery from "../pages/ImageGallery";
+import StraggerAnimation from "../pages/Stragger Animation/StraggerAnimation";
+import StraggerAnimationExample1 from "../pages/Stragger Animation/Example1";
+import StraggerAnimationExample2 from "../pages/Stragger Animation/Example2";
 
 
 
@@ -99,6 +102,21 @@ const router = createBrowserRouter([
         id:"Image Gallery",
         element:<ImageGallery/>
     },
+    {
+        path:"/stragger-animation",
+        id:"Stragger Animation",
+        element:<StraggerAnimation/>
+    },
+    {
+        path:"/stragger-animation/example-1",
+        id:"Example 1 - Stragger Animation",
+        element:<StraggerAnimationExample1/>
+    },
+    {
+        path:"/stragger-animation/example-2",
+        id:"Example 2 - Stragger Animation",
+        element:<StraggerAnimationExample2/>
+    }
     
 
 ]);
