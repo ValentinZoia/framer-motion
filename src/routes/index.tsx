@@ -24,6 +24,7 @@ import UseMotionValueExample3 from "../pages/useMotionValue/Example3";
 import ScrollIndicator from "../pages/ScrollIndicator";
 import DraggableCards from "../pages/DraggableCards";
 import Carousel from "../pages/Carousel";
+import AnimationNavigation from "../pages/AnimationNavigation";
 
 
 
@@ -158,6 +159,11 @@ const router = createBrowserRouter([
         path:"/carousel",
         id:"Carousel",
         element:<Carousel/>
+    },
+    {
+        path:"/animation-navigation",
+        id:"Animation Navigation",
+        element:<AnimationNavigation />
     }
     
 
