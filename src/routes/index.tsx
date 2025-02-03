@@ -22,6 +22,7 @@ import UseMotionValueExample1 from "../pages/useMotionValue/Example1";
 import UseMotionValueExample2 from "../pages/useMotionValue/Example2";
 import UseMotionValueExample3 from "../pages/useMotionValue/Example3";
 import ScrollIndicator from "../pages/ScrollIndicator";
+import DraggableCards from "../pages/DraggableCards";
 
 
 
@@ -146,7 +147,12 @@ const router = createBrowserRouter([
         path:"scroll-indicator",
         id:"Scroll Indicator",
         element:<ScrollIndicator/>
-    }
+    },
+    {
+        path:"/draggable-cards",
+        id:"Draggable Cards",
+        element:<DraggableCards />
+    },
     
 
 ]);
