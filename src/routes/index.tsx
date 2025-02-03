@@ -28,6 +28,11 @@ import AnimationNavigation from "../pages/AnimationNavigation";
 import ScrollAnimation from "../pages/ScrollAnimation";
 import HorizontalScroll from "../pages/HorizontalScroll";
 import StickyNav from "../pages/StickyNavbar";
+import ProgressSteps from "../pages/ProgressStemps";
+import AnimatedLogoCloud from "../pages/AnimatedLogoCloud";
+import TextAnimations from "../pages/Text Animations/TextAnimations";
+import RevealLinks from "../pages/Text Animations/RevealLinks";
+import TextReveal from "../pages/Text Animations/TextReveal";
 
 
 
@@ -182,6 +187,31 @@ const router = createBrowserRouter([
         path:"/sticky-navbar",
         id:"Sticky Navbar",
         element:<StickyNav />
+    },
+    {
+        path:"/progress-steps",
+        id:"Progress Steps",
+        element:<ProgressSteps />
+    },
+    {
+        path:"/animation-logo-cloud",
+        id:"Animation Logo Cloud",
+        element:<AnimatedLogoCloud />
+    },
+    {
+        path:"/text-animations",
+        id:"Text Animations",
+        element:<TextAnimations />
+    },
+    {
+        path:"/text-animations/reveal-links",
+        id:"Reveal Links",
+        element:<RevealLinks />
+    },
+    {
+        path:"/text-animations/text-reveal-effect",
+        id:"Text Reveal Effect",
+        element:<TextReveal />
     }
     
 
