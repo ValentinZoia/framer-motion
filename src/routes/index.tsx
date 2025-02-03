@@ -23,6 +23,7 @@ import UseMotionValueExample2 from "../pages/useMotionValue/Example2";
 import UseMotionValueExample3 from "../pages/useMotionValue/Example3";
 import ScrollIndicator from "../pages/ScrollIndicator";
 import DraggableCards from "../pages/DraggableCards";
+import Carousel from "../pages/Carousel";
 
 
 
@@ -153,6 +154,11 @@ const router = createBrowserRouter([
         id:"Draggable Cards",
         element:<DraggableCards />
     },
+    {
+        path:"/carousel",
+        id:"Carousel",
+        element:<Carousel/>
+    }
     
 
 ]);
