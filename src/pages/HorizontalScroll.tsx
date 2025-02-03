@@ -1,8 +1,9 @@
+import ScrollCarousel from "../components/HorizontalScroll/ScrollCarousel"
 
 
 const HorizontalScroll = () => {
   return (
-    <div>HorizaontalScroll</div>
+    <ScrollCarousel />
   )
 }
 

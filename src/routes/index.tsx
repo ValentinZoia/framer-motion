@@ -26,6 +26,7 @@ import DraggableCards from "../pages/DraggableCards";
 import Carousel from "../pages/Carousel";
 import AnimationNavigation from "../pages/AnimationNavigation";
 import ScrollAnimation from "../pages/ScrollAnimation";
+import HorizontalScroll from "../pages/HorizontalScroll";
 
 
 
@@ -170,6 +171,11 @@ const router = createBrowserRouter([
         path:"/scroll-animation",
         id:"Scroll Animation",
         element:<ScrollAnimation />
+    },
+    {
+        path:"/horizontal-scroll",
+        id:"Horizontal Scroll",
+        element:<HorizontalScroll />
     }
     
 
