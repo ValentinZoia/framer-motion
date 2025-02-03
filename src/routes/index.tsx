@@ -25,6 +25,7 @@ import ScrollIndicator from "../pages/ScrollIndicator";
 import DraggableCards from "../pages/DraggableCards";
 import Carousel from "../pages/Carousel";
 import AnimationNavigation from "../pages/AnimationNavigation";
+import ScrollAnimation from "../pages/ScrollAnimation";
 
 
 
@@ -164,6 +165,11 @@ const router = createBrowserRouter([
         path:"/animation-navigation",
         id:"Animation Navigation",
         element:<AnimationNavigation />
+    },
+    {
+        path:"/scroll-animation",
+        id:"Scroll Animation",
+        element:<ScrollAnimation />
     }
     
 
