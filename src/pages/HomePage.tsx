@@ -7,7 +7,7 @@ export default function HomePage() {
   const filterRoutes = router.routes.map((r) => r).filter((r)=>r.path !== "/" && !(r.path?.includes("example")));
   
   return (
-    <div className="w-full h-screen flex flex-col gap-4 items-center justify-center">
+    <div className="py-4 w-full h-screen flex flex-col flex-wrap gap-4 items-center justify-center">
       {filterRoutes.map((r) => (
         
           <Link

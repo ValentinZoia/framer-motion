@@ -27,6 +27,7 @@ import Carousel from "../pages/Carousel";
 import AnimationNavigation from "../pages/AnimationNavigation";
 import ScrollAnimation from "../pages/ScrollAnimation";
 import HorizontalScroll from "../pages/HorizontalScroll";
+import StickyNav from "../pages/StickyNavbar";
 
 
 
@@ -176,6 +177,11 @@ const router = createBrowserRouter([
         path:"/horizontal-scroll",
         id:"Horizontal Scroll",
         element:<HorizontalScroll />
+    },
+    {
+        path:"/sticky-navbar",
+        id:"Sticky Navbar",
+        element:<StickyNav />
     }
     
 
