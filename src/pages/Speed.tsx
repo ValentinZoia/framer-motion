@@ -2,10 +2,10 @@ import {
   motion,
   MotionValue,
   useScroll,
-  useSpring,
+  
   useTransform,
 } from "framer-motion";
-import { ReactNode, useRef } from "react";
+import { useRef } from "react";
 import LataSpeedImg from "../assets/speed_lata.png";
 
 
@@ -52,21 +52,48 @@ const Speed = () => {
   //   })
 
   return (
-    <article className="w-full h-[800vh] bg-gray-800" ref={scrollRef}>
-      
+    <article className="w-full h-[900vh] bg-black" ref={scrollRef}>
+        <ScrollProgressBar scrollYProgress={scrollYProgress} />
         <LataSpeed scrollYProgress={scrollYProgress} />
-        <CajaDeTexto scrollYProgress={scrollYProgress} text="Lata Speed" startScrollProgress={0.25} endScrollProgress={0.45} />
-        <CajaDeTexto scrollYProgress={scrollYProgress} text="Lata Speed" startScrollProgress={0.47} endScrollProgress={0.67} />
-        <CajaDeTexto scrollYProgress={scrollYProgress} text="Lata Speed" startScrollProgress={0.70} endScrollProgress={0.90} />
-      
+        <CajaDeTexto
+          scrollYProgress={scrollYProgress}
+          text="Lata Speed 1"
+          startScrollProgress={0.25}
+          endScrollProgress={0.45}
+          position="right"
+          endBoxPosition="1vh"
+        />
+        <CajaDeTexto
+          scrollYProgress={scrollYProgress}
+          text="Lata Speed 2"
+          startScrollProgress={0.47}
+          endScrollProgress={0.67}
+          position="left"
+          endBoxPosition="10vh"
+        />
+        <CajaDeTexto
+          scrollYProgress={scrollYProgress}
+          text="Lata Speed 3"
+          startScrollProgress={0.7}
+          endScrollProgress={0.9}
+          position="right"
+          endBoxPosition="20vh"
+        />
     </article>
   );
 };
 
 
 
-
-
+const ScrollProgressBar = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
+    const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
+  
+    return (
+      <div className="fixed left-8 top-0 bottom-0 w-2 my-8 bg-gray-500 z-50 rounded-lg">
+        <motion.div className="w-full bg-red-700 origin-top rounded-lg" style={{ height: lineHeight, transition: "height 0.1s ease" }} />
+      </div>
+    )
+  }
  
 
 const LataSpeed = ({ scrollYProgress }: { scrollYProgress: MotionValue }) => {
@@ -86,6 +113,7 @@ const LataSpeed = ({ scrollYProgress }: { scrollYProgress: MotionValue }) => {
         src={LataSpeedImg}
         alt="Lata Speed"
         
+        
       ></motion.img>
       </div>
       
@@ -99,27 +127,37 @@ const CajaDeTexto = ({
   text,
   startScrollProgress,
   endScrollProgress,
+  endBoxPosition,
+  position,
 }: {
   scrollYProgress: MotionValue;
   title?: string;
   text?: string;
   startScrollProgress: number;
   endScrollProgress: number;
+  endBoxPosition: string;
+  position: "left" | "right";
 }) => {
-  const y = useTransform(scrollYProgress, [startScrollProgress, endScrollProgress], ["50vh", "50vh"]);
-  const opacity = useTransform(scrollYProgress, [(startScrollProgress - 0.01), startScrollProgress,(endScrollProgress - 0.01) ,endScrollProgress], [ 0,1,1,0]);
+  const y = useTransform(scrollYProgress, [(startScrollProgress - 0.01), startScrollProgress,(endScrollProgress - 0.01) ,endScrollProgress,(endScrollProgress + 0.17)], ["50vh", "50vh","50vh", "25vh",endBoxPosition]);
+  const opacity = useTransform(scrollYProgress, [(startScrollProgress - 0.01), startScrollProgress,(endScrollProgress - 0.01) ,endScrollProgress], [ 0,1,1,1]);
   
 
+  const xPosition = position === "left" ? "calc(50% - 300px)" : "calc(50% + 200px)"
+
   return (
-    <div >
-      <motion.div
-        className="w-[100px] h-[100px] bg-yellow-700 fixed inset-0 mx-auto "
-        style={{ y, opacity, }}
-      >
-        {title}
-      </motion.div>
-    </div>
-  );
+    <motion.div
+      className="w-[250px] h-[100px] bg-transparent rounded-b-lg border-white/30 border-b-[1px] border-x-[1px] fixed flex items-center justify-center text-white text-sm"
+      style={{
+        y,
+        opacity,
+        left: xPosition,
+        
+      }}
+    >
+    {title}
+      {text}
+    </motion.div>
+  )
 };
 
 export default Speed;
