@@ -33,7 +33,7 @@ import AnimatedLogoCloud from "../pages/AnimatedLogoCloud";
 import TextAnimations from "../pages/Text Animations/TextAnimations";
 import RevealLinks from "../pages/Text Animations/RevealLinks";
 import TextReveal from "../pages/Text Animations/TextReveal";
-import Speed from "../pages/Speed";
+import Speed from "../pages/Speed/Speed";
 
 
 
