@@ -1,5 +1,6 @@
 import { useTransform, motion, MotionValue } from "framer-motion";
 import LataSpeedImg from "../../assets/speed_lata.png";
+import LineRed from "./LineRed";
 
 const LataSpeed = ({ scrollYProgress, scrollProgressHandler }: { scrollYProgress: MotionValue; scrollProgressHandler: number[] }) => {
 
@@ -72,7 +73,14 @@ const LataSpeed = ({ scrollYProgress, scrollProgressHandler }: { scrollYProgress
   
     
   
-  
+  const speedStillMoments = [
+    0, 0.09 , // La lata no esta quieta y tiene scale de 0.8
+    0.09, 0.3, //La lata esta quieta y tiene scale de 2
+    0.3,0.59, // La lata no esta quieta y tiene scale de 0.8
+    0.59,0.68,// La lata esta quieta y tiene scale de 2
+    0.68,1,// La lata no esta quieta y tiene scale de 0.8
+    1 // La lata esta quieta y tiene scale de 2
+  ];
   
   
   
@@ -84,13 +92,29 @@ const LataSpeed = ({ scrollYProgress, scrollProgressHandler }: { scrollYProgress
     
   
     return (
-      <div className="w-[30%] md:w-[20%] mx-auto fixed inset-0 ">
+      <div className="w-[30%] md:w-[25%] lg:w-[20%] mx-auto fixed inset-0 ">
          <div className="w-full flex justify-center items-center">
-            <motion.img
+            
+            <motion.div
+            style={{ y, scale,  x: lataX, opacity, rotate }}
+            className="flex gap-4 items-center justify-center"
+            >
+              <LineRed scrollYProgress={scrollYProgress} speedStillMoments={speedStillMoments} />
+                <img
+                src={LataSpeedImg}
+                alt="Lata Speed"
+                className="w-full"
+                />
+                
+                
+
+            </motion.div>
+            
+            {/* <motion.img
               style={{ y, scale,  x: lataX, opacity, rotate }}
               src={LataSpeedImg}
               alt="Lata Speed"
-            />
+            /> */}
         </div>
         
       </div>
