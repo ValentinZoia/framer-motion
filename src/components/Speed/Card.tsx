@@ -14,8 +14,7 @@ const Card = ({
   scrollYProgress: MotionValue<number>;
 }) => {
   // Define las posiciones basadas en el ID
-  const position = id % 2 === 0 ? "left" : "right";
-  const xPosition = position === "left" ? "calc(50% - 350px)" : "calc(50% + 50px)";
+  
 
   // Configuración de opacidades según el ID
   const getOpacityConfig = (cardId: number) => {
@@ -53,20 +52,33 @@ const Card = ({
   };
 
   // Configuración de transformaciones Y según el ID
-  // const getYTransformConfig = (cardId: number) => {
-  //   const baseTransform = ["0%", "0%", "50%", "50%", "-50%", "-50%", "0%", "0%"];
+  const getYTransformConfig = (cardId: number) => {
+    const baseTransform = ["0vh", "0vh", "50vh", "50vh", "-50vh", "-50vh", "0vh", "0vh"];
     
-  //   switch (cardId) {
-  //     case 1:
-  //       return ["0%", "0%", "50%", "50%", "0%", "0%", "0%", "0%", "0%", "0%", "0%"];
-  //     case 2:
-  //       return ["0%", "0%", "0%", "0%", "0%", "0%", "50%", "50%", "0%", "0%", "0%"];
-  //     case 3:
-  //       return ["0%", "0%", "0%", "0%", "0%", "0%", "0%", "0%", "0%", "0%", "50%"];
-  //     default:
-  //       return baseTransform;
-  //   }
-  // };
+    switch (cardId) {
+      case 0:
+        return ["10vh", "10vh", "10vh", "10vh", "10vh", "10vh", "10vh", "10vh", "10vh", "10vh", "0vh"];
+      case 1:
+        return ["25vh", "25vh", "25vh", "25vh", "25vh", "25vh", "25vh", "25vh", "25vh", "25vh", "25vh"];
+      case 2:
+        return  ["40vh", "40vh", "40vh", "40vh", "40vh", "40vh", "40vh", "40vh", "40vh", "40vh", "40vh"];
+      default:
+        return baseTransform;
+    }
+  };
+
+  const getXTransformConfig = (cardId:number)=>{
+    switch (cardId) {
+      case 0:
+        return ["0vw", "0vw", "10vw", "10vw", "0vw", "0vw", "0vw", "0vw", "0vw", "0vw", "0vw"];
+      case 1:
+        return ["0vw", "0vw", "0vw", "0vw", "0vw", "100vw", "35vw", "35vw", "100vw", "0vw", "0vw"];
+      case 2:
+        return ["0vw", "0vw", "0vw", "0vw", "0vw", "0vw", "0vw", "0vw", "0vw", "0vw", "10vw"];
+      default:
+        return ["0vw", "0vw", "0vw", "0vw", "0vw", "0vw", "0vw", "0vw", "0vw", "0vw", "10vw"];
+    }
+  }
 
   // Crear las transformaciones
   const opacity = useTransform(
@@ -75,27 +87,32 @@ const Card = ({
     getOpacityConfig(id)
   );
 
-  // const y = useTransform(
-  //   scrollYProgress,
-  //   speedStillMoments,
-  //   getYTransformConfig(id)
-  // );
+  const y = useTransform(
+    scrollYProgress,
+    speedStillMoments,
+    getYTransformConfig(id)
+  );
+
+  const x = useTransform(
+    scrollYProgress,
+    speedStillMoments,
+    getXTransformConfig(id)
+  )
 
   return (
     <motion.div
-      className="md:w-[350px] md:h-[200px] lg:w-[400px] lg:h-[250px] rounded-lg bg-slate-200/60 p-6 fixed"
+      className="w-[300px] sm:w-[400px] md:w-[450px] md:h-[200px] lg:w-[600px] xl:w-[700px] 2xl:w-[900px]  lg:h-[350px] rounded-lg bg-transparent text-white p-6 fixed inset-0"
       style={{
         opacity,
-        // y,
-        left: xPosition,
+        y,
+        x,
+        
         transition: "opacity 0.5s ease, transform 0.5s ease",
       }}
     >
-      <h2 className="text-xl font-bold mb-2 text-slate-800">{title}</h2>
-      <p className="text-slate-700">{text}</p>
-      <div className="absolute bottom-4 right-4 text-sm text-slate-500">
-        {position === "left" ? "←" : "→"} Card {id}
-      </div>
+      <h2 className="text-md sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-2 text-slate-600">{title}</h2>
+      <p className="text-slate-200 text-md sm:text-xl lg:text-2xl">{text}</p>
+      
     </motion.div>
   );
 };

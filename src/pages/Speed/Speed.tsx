@@ -3,7 +3,7 @@ import {  useRef } from "react";
 
 import ScrollProgressBar from "../../components/Speed/ScrollProgressBar";
 import LataSpeed from "../../components/Speed/LataSpeed";
-import Card from "../../components/Speed/Card";
+
 
 
 const scrollProgressHandler = [
@@ -19,14 +19,7 @@ const scrollProgressHandler = [
   0.88, 1,    // Momento 10: 0.88 - 1
 ];
 
-const speedStillMoments = [
-  0, 0.09 , // La lata no esta quieta y tiene scale de 0.8
-  0.09, 0.3, //La lata esta quieta y tiene scale de 2
-  0.3,0.59, // La lata no esta quieta y tiene scale de 0.8
-  0.59,0.68,// La lata esta quieta y tiene scale de 2
-  0.68,1,// La lata no esta quieta y tiene scale de 0.8
-  1 // La lata esta quieta y tiene scale de 2
-];
+
 
 
 const Speed = () => {
@@ -35,46 +28,21 @@ const Speed = () => {
     target: scrollRef,
   });
 
-  const cardData =[
-    { position: "left", title: "Speed Unlimited 1", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
-    { position: "right", title: "Speed Unlimited 2", text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
-    { position: "left", title: "Speed Unlimited 3", text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
-  ];
+  
   
 
   
 
   
   return (
-    <article className="w-full h-[1000vh]   bg-black" ref={scrollRef}>
+    <article className="w-full h-[1000vh]   bg-transparent" ref={scrollRef}>
       <ScrollProgressBar scrollYProgress={scrollYProgress} />
       <LataSpeed
         scrollYProgress={scrollYProgress}
         scrollProgressHandler={scrollProgressHandler}
       />
       
-      {
-        cardData.map((card, index) => (
-          <Card
-            id={index}
-            key={index}
-            title={card.title}
-            text={card.text}
-            // position={card.position as "left" | "right"}
-            // cardY={cardY}
-            // cardOpacity={cardOpacity}
-            speedStillMoments={speedStillMoments}
-            scrollYProgress={scrollYProgress}
-          />
-        ))
-      }
-      {/* <Card
-        title={currentCard.title}
-        text={currentCard.text}
-        position={currentCard.position as "left" | "right"}
-        cardY={cardY}
-        cardOpacity={cardOpacity}
-      /> */}
+      
     </article>
   );
 };
