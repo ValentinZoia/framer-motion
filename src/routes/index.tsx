@@ -34,6 +34,7 @@ import TextAnimations from "../pages/Text Animations/TextAnimations";
 import RevealLinks from "../pages/Text Animations/RevealLinks";
 import TextReveal from "../pages/Text Animations/TextReveal";
 import Speed from "../pages/Speed/Speed";
+import MarqueePage from "../pages/Marquee/Page";
 
 
 
@@ -218,6 +219,11 @@ const router = createBrowserRouter([
         path:"/speed",
         id:"Speed",
         element:<Speed />
+    },
+    {
+        path:"/marquee",
+        id:"Marquee",
+        element:<MarqueePage />
     }
     
 

@@ -13,13 +13,18 @@ const UseMotionValueExample1 = () => {
     });
   
     return (
-      <motion.div
+      
+      <div className='w-full h-screen bg-gray-900 flex items-center justify-center'>
+       <motion.div
         className="box"
         drag
         dragConstraints={{ left: 0, right: 200 }}
         style={{ x }}
       />
-    );
+
+    </div>
+    )
+    
 }
 
 export default UseMotionValueExample1
