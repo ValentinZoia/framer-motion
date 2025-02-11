@@ -35,6 +35,7 @@ import RevealLinks from "../pages/Text Animations/RevealLinks";
 import TextReveal from "../pages/Text Animations/TextReveal";
 import Speed from "../pages/Speed/Speed";
 import MarqueePage from "../pages/Marquee/Page";
+import MosaicoPage from "../pages/Mosaico/Page";
 
 
 
@@ -224,6 +225,10 @@ const router = createBrowserRouter([
         path:"/marquee",
         id:"Marquee",
         element:<MarqueePage />
+    },{
+        path:"/mosaico",
+        id:"Mosaico",
+        element:<MosaicoPage />
     }
     
 
