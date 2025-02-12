@@ -39,6 +39,8 @@ import MosaicoPage from "../pages/Mosaico/Page";
 import { FlipWords } from "../pages/FlipWords";
 
 import JackPotSectionPage from "../pages/JackPotSection/Page";
+import { MovingBorder } from "../pages/MovingBorder";
+import { OffsetExample } from "../pages/OffsetExample";
 
 
 
@@ -242,6 +244,16 @@ const router = createBrowserRouter([
         path:"/jack-pot-section",
         id:"Jack Pot Section",
         element:<JackPotSectionPage />
+    },
+    {
+        path:"/moving-border",
+        id:"Moving Border",
+        element:<MovingBorder />
+    },
+    {
+        path:"/offset",
+        id:"Offset",
+        element:<OffsetExample />
     }
     
 
