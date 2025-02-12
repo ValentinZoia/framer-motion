@@ -36,6 +36,7 @@ import TextReveal from "../pages/Text Animations/TextReveal";
 import Speed from "../pages/Speed/Speed";
 import MarqueePage from "../pages/Marquee/Page";
 import MosaicoPage from "../pages/Mosaico/Page";
+import { FlipWords } from "../pages/FlipWords";
 
 
 
@@ -229,6 +230,11 @@ const router = createBrowserRouter([
         path:"/mosaico",
         id:"Mosaico",
         element:<MosaicoPage />
+    },
+    {
+        path:"/flip-words",
+        id:"Flip Words",
+        element:<FlipWords />
     }
     
 
