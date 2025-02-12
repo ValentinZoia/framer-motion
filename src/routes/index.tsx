@@ -41,6 +41,7 @@ import { FlipWords } from "../pages/FlipWords";
 import JackPotSectionPage from "../pages/JackPotSection/Page";
 import { MovingBorder } from "../pages/MovingBorder";
 import { OffsetExample } from "../pages/OffsetExample";
+import { SimpleAnimatedGallery } from "../pages/SimpleAnimatedGallery";
 
 
 
@@ -254,6 +255,11 @@ const router = createBrowserRouter([
         path:"/offset",
         id:"Offset",
         element:<OffsetExample />
+    },
+    {
+        path:"/simple-animated-gallery",
+        id:"Simple Animated Gallery",
+        element:<SimpleAnimatedGallery />
     }
     
 
