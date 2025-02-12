@@ -42,6 +42,8 @@ import JackPotSectionPage from "../pages/JackPotSection/Page";
 import { MovingBorder } from "../pages/MovingBorder";
 import { OffsetExample } from "../pages/OffsetExample";
 import { SimpleAnimatedGallery } from "../pages/SimpleAnimatedGallery";
+import WoobleCardPage from "../pages/WobbleCard/WoobleCardPage";
+
 
 
 
@@ -260,7 +262,13 @@ const router = createBrowserRouter([
         path:"/simple-animated-gallery",
         id:"Simple Animated Gallery",
         element:<SimpleAnimatedGallery />
+    },
+    {
+        path:"wobble-card",
+        id:"Wobble Card",
+        element:<WoobleCardPage />
     }
+    
     
 
 ]);
