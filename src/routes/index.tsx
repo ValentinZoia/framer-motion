@@ -38,6 +38,8 @@ import MarqueePage from "../pages/Marquee/Page";
 import MosaicoPage from "../pages/Mosaico/Page";
 import { FlipWords } from "../pages/FlipWords";
 
+import JackPotSectionPage from "../pages/JackPotSection/Page";
+
 
 
 
@@ -235,6 +237,11 @@ const router = createBrowserRouter([
         path:"/flip-words",
         id:"Flip Words",
         element:<FlipWords />
+    },
+    {
+        path:"/jack-pot-section",
+        id:"Jack Pot Section",
+        element:<JackPotSectionPage />
     }
     
 
